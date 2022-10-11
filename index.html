@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles2.css">
+    <script src="js/auto.js"></script>
+    <script src="js/app.js"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body onload="renderList()">
+
+    <header class="p-3 bg-primary text-white">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <span class="material-symbols-outlined mx-2">directions_car</span>
+                <h4 class="m-0">Autos</h4>
+            </div>
+        </div>
+    </header>
+
+    <div class="container p-3">
+        <button onclick="showAgregar()" type="button" class="btn btn-primary d-flex align-items-center px-2" enabled
+            id="botonMenuAgregar"><span class="material-symbols-outlined">
+                add
+            </span>Agregar</button>
+    </div>
+    <div class="container-fluid" id="divAgregar">
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4 bg-white shadow-sm p-4">
+                <h4>Agregar Auto</h4>
+                <div>
+                    <label for="txtMarca" class="form-label">Marca</label>
+                    <input type="txtMarca" class="form-control" id="txtMarca" placeholder="Marca...">
+                </div>
+                <div>
+                    <label for="txtModelo" class="form-label">Modelo</label>
+                    <input type="txtModelo" class="form-control" id="txtModelo" placeholder="Modelo...">
+                </div>
+                <div class="mb-3">
+                    <label for="txtMatricula" class="form-label">Matricula</label>
+                    <input type="txtMatricula" class="form-control" id="txtMatricula" placeholder="Matricula...">
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <button onclick="agregarAuto()" class="btn btn-primary" id="botonAgregarAuto">Agregar
+                            auto</button>
+                    </div>
+                    <div class="col-auto">
+                        <button onclick="showList()" type="button" class="btn btn-warning text-white"
+                            id="botonMenuAgregar">Atras</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div>
+    </div>
+    <div id="containerList" class="container-md bg-white p-3 shadow-sm">
+        <div id="divLista">
+
+        </div>
+    </div>
+
+    <div class="container-fluid" id="divModificar">
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4 bg-white shadow-sm p-4">
+                <h4>Modificar Auto</h4>
+                <div>
+                    <label for="txtMarcaM" class="form-label">Marca</label>
+                    <input type="txtMarcaM" class="form-control" id="txtMarcaM" placeholder="Marca...">
+                </div>
+                <div>
+                    <label for="txtModeloM" class="form-label">Modelo</label>
+                    <input type="txtModeloM" class="form-control" id="txtModeloM" placeholder="Modelo...">
+                </div>
+                <div class="mb-3">
+                    <label for="txtMatriculaM" class="form-label">Matricula</label>
+                    <input type="txtMatriculaM" class="form-control" id="txtMatriculaM" placeholder="Matricula...">
+                </div>
+                <div class="row">
+                    <div class="col" id="divBotonGuardarMod">        
+                    </div>
+                    <div class="col-auto">
+                        <button onclick="showList()" type="button" class="btn btn-warning text-white"
+                            id="botonMenuAgregar">Atras</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
